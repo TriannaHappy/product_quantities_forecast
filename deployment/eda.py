@@ -76,7 +76,7 @@ def run():
     df['year'] = pd.to_numeric(df['week_number'].apply(lambda x: x[:-3]))
 
     # Quantities of product sold per week
-    st.write('#### Describe of The Customer Profil Dataset')
+    st.write('#### Describe of Quantities of Sold Products Per Week')
     st.dataframe(df.groupby('week_start_date')['quantity'].sum().describe())
     st.write('It shows that the total of products sold per week are around 4.9M in 50% percentile and mean of the data, \
              while the maximum sold per week are 7.1M and minimum sold are 1.2M.')
